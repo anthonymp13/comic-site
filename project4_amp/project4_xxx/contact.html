@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+          Project 4
+          Author: Anthony Poleski
+          Date:   12/10/2019
+      
+          Filename: contact.html
+         -->
+   
+   <title>Ghost of the Deep Cover Page</title>
+   <meta charset="utf-8" />
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" type="text/css">
+   <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+   <link rel="stylesheet" href="css/contact.css" type="text/css"/>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <script src="includeHTML.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+   
+   <!-- Header -->
+   <div w3-include-html="header.html"></div> 
+
+   <main>
+   <h1>Contact Us</h1>
+
+   <form id="form" method="POST" action="http://itins3.madisoncollege.edu/echo.php" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" maxlength="25"  placeholder="First Name" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">First Name is required (up to 25 characters)</div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" maxlength="25" placeholder="Last Name" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Last Name is required (up to 25 characters)</div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Example@Example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Email is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="999-999-9999" >
+        <div class="invalid-feedback">Phone number must be in 999-999-9999 format.</div>
+    </div>
+
+    <div class="form-group">
+        <h2>Phone Number Type</h2>
+        <div class="unboldLabel">
+        <div class="form-check">
+        <label class="form-check-label" for="home">
+            <input type="radio" class="form-check-input" value="Home" id="home" name="phoneNumberType">Home
+        </label>
+        </div>
+        <div class="form-check">
+        <label class="form-check-label" for="cell">
+            <input type="radio" class="form-check-input" value="Cell" id="cell" name="phoneNumberType">Cell
+        </label>
+        </div>
+        <div class="form-check">
+        <label class="form-check-label" for="work">
+            <input type="radio" class="form-check-input" value="Work" id="work" name="phoneNumberType">Work
+        </label>
+        </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h2>Information Requesting</h2>
+        <div class="unboldLabel">
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input checkbox" value="Collections" name="Collections">Collections
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input checkbox" value="Trade-Ins" name="Trade-Ins">Trade-Ins
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input checkbox" value="Add To Mailing" name="AddToMailing">Add To Mailing
+            </label>
+        </div>
+        </div>
+    </div>
+
+
+    <button type="submit" id="submitButton" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-secondary">Clear</button>
+  </form>
+</main>
+
+<!-- Footer -->
+<div w3-include-html="footer.html"></div>
+
+
+</div>
+<script>
+   includeHTML();
+
+   // Disable form submissions if there are invalid fields
+    (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+        });
+    }, false);
+    })();
+</script>
+
+</body>
+</html>

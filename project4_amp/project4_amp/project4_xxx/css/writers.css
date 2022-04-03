@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+
+h1 {
+    font-size: 1em;
+}
+
+.row div {
+    margin-bottom: .5em;
+}
+
+.card {
+    margin-bottom: .25em;
+    height: 100%;
+}
+
