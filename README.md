@@ -1,7 +1,7 @@
 # Comic Book Site - Advanced CSS
 
 ### Problem Statement:
-Develop a site based off of design specifications for my Advanced CSS class at Madison Area Technical College. 
+Develop a site that displays a comic book and sneek peeks of upcoming releases. Designs were based off of design specifications that were provided for my Advanced CSS class at Madison Area Technical College. 
 
 ### Project Technologies/Techniques 
 * AAA Web Content Accessibility Guidelines
