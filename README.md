@@ -1,14 +1,21 @@
-# comic-site
+# Comic Book Site - Advanced CSS
 
 ### Problem Statement:
-
-A site that shows a comic book preview
+Develop a site based off of design specifications for my Advanced CSS class at Madison Area Technical College. 
 
 ### Project Technologies/Techniques 
-
-* CSS 
+* AAA Web Content Accessibility Guidelines
+  * Aria labels
+* Responsive design
+  * Flexbox
+  * Bootstrap Grid
+  * Media Queries
+* Styling
+  * CSS 
   * Bootstrap
-* IDE: IntelliJ IDEA
+* Form Validation
+  * Javascript
+* IDE: Visual Studio Code
 
 
-### Design
+
